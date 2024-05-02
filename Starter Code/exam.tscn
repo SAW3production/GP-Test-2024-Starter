@@ -1,3 +1,57 @@
-[gd_scene format=3 uid="uid://bunyohpobvu8b"]
+[gd_scene load_steps=4 format=3 uid="uid://bunyohpobvu8b"]
+
+[ext_resource type="Texture2D" uid="uid://rb8smo0f45mc" path="res://icon.svg" id="1_q3u3n"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_i07y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b81u"]
+size = Vector2(1021, 258)
 
 [node name="root" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(511, 464)
+texture = ExtResource("1_q3u3n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer"]
+offset_left = 92.0
+offset_top = 76.0
+offset_right = 331.0
+offset_bottom = 92.0
+min_value = 1.0
+max_value = 20.0
+value = 10.0
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 150.0
+offset_top = 118.0
+offset_right = 263.0
+offset_bottom = 149.0
+text = "Create Nodes"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 36.0
+offset_top = 71.0
+offset_right = 76.0
+offset_bottom = 94.0
+text = "Count:"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 340.0
+offset_top = 71.0
+offset_right = 391.0
+offset_bottom = 94.0
+text = "0"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(512, 940.25)
+scale = Vector2(1024, 257.5)
+texture = SubResource("CanvasTexture_i07y7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(510.5, 944)
+shape = SubResource("RectangleShape2D_5b81u")
