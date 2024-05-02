@@ -11,6 +11,12 @@ func _ready():
 	num.text = str(slider.value)
 	radius_num.text = str(radius_slider.value)
 	radius = radius_slider.value
+	
+func _process(delta):
+	if(Input.is_action_just_pressed("Mouse Left")):
+		position = get_global_mouse_position()
+		_on_create_pressed()
+	
 func _on_create_pressed():
 	var center = position
 	var theta = PI*2 / slider.value
