@@ -12,7 +12,7 @@ size = Vector2(1021, 258)
 [node name="root" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(511, 464)
+position = Vector2(511, 466)
 texture = ExtResource("1_q3u3n")
 script = ExtResource("2_25ptg")
 
@@ -49,6 +49,7 @@ offset_bottom = 94.0
 text = "0"
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 137)
 script = ExtResource("3_che4j")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
@@ -60,5 +61,6 @@ texture = SubResource("CanvasTexture_i07y7")
 position = Vector2(510.5, 944)
 shape = SubResource("RectangleShape2D_5b81u")
 
+[connection signal="value_changed" from="CanvasLayer/HSlider" to="Icon" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/Create" to="Icon" method="_on_create_pressed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
