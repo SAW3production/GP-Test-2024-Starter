@@ -2,11 +2,15 @@ extends Sprite2D
 
 var icon = preload("res://icon.tscn")
 @onready var slider = $"../CanvasLayer/HSlider"
-const radius = 350
+@onready var radius_slider = $"../CanvasLayer/Radius/Radius_slider"
+var radius = 350
 @onready var num = $"../CanvasLayer/num"
+@onready var radius_num = $"../CanvasLayer/Radius/radius_num"
 
 func _ready():
 	num.text = str(slider.value)
+	radius_num.text = str(radius_slider.value)
+	radius = radius_slider.value
 func _on_create_pressed():
 	var center = position
 	var theta = PI*2 / slider.value
@@ -19,3 +23,8 @@ func _on_create_pressed():
 
 func _on_h_slider_value_changed(value):
 	num.text = str(value)
+
+
+func _on_radius_slider_value_changed(value):
+	radius_num.text = str(value)
+	radius = value

@@ -48,6 +48,33 @@ offset_right = 391.0
 offset_bottom = 94.0
 text = "0"
 
+[node name="Radius" type="Node2D" parent="CanvasLayer"]
+position = Vector2(390, 0)
+
+[node name="Radius_slider" type="HSlider" parent="CanvasLayer/Radius"]
+offset_left = 92.0
+offset_top = 76.0
+offset_right = 331.0
+offset_bottom = 92.0
+max_value = 500.0
+step = 20.0
+value = 10.0
+
+[node name="Radius" type="Label" parent="CanvasLayer/Radius"]
+offset_left = 36.0
+offset_top = 71.0
+offset_right = 76.0
+offset_bottom = 94.0
+text = "Radius:
+"
+
+[node name="radius_num" type="Label" parent="CanvasLayer/Radius"]
+offset_left = 340.0
+offset_top = 71.0
+offset_right = 391.0
+offset_bottom = 94.0
+text = "0"
+
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, 137)
 script = ExtResource("3_che4j")
@@ -63,4 +90,5 @@ shape = SubResource("RectangleShape2D_5b81u")
 
 [connection signal="value_changed" from="CanvasLayer/HSlider" to="Icon" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/Create" to="Icon" method="_on_create_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Radius/Radius_slider" to="Icon" method="_on_radius_slider_value_changed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
