@@ -2,7 +2,6 @@ extends RigidBody2D
 
 @onready var animation_player = $AnimationPlayer
 
-func _on_body_entered(body):
-	print(1)
+func explode():
 	animation_player.play("boom")
 
