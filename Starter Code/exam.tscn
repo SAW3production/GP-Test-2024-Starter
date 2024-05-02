@@ -75,6 +75,13 @@ offset_right = 391.0
 offset_bottom = 94.0
 text = "0"
 
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 794.0
+offset_top = 19.0
+offset_right = 996.0
+offset_bottom = 42.0
+text = "Right Mouse click to move"
+
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, 137)
 script = ExtResource("3_che4j")

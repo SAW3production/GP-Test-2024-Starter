@@ -13,7 +13,7 @@ func _ready():
 	radius = radius_slider.value
 	
 func _process(delta):
-	if(Input.is_action_just_pressed("Mouse Left")):
+	if(Input.is_action_just_pressed("Mouse Right")):
 		position = get_global_mouse_position()
 		_on_create_pressed()
 	
