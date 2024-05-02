@@ -5,7 +5,8 @@ var icon = preload("res://icon.tscn")
 const radius = 350
 @onready var num = $"../CanvasLayer/num"
 
-
+func _ready():
+	num.text = str(slider.value)
 func _on_create_pressed():
 	var center = position
 	var theta = PI*2 / slider.value
